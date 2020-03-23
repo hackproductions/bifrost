@@ -18,6 +18,7 @@ const upload = (file) => {
   ).then(
     success => {
         console.log(success);
+        document.getElementById("results") += success + "<br />";
 
         const formData = new FormData();
         Object.entries(success['fields']).forEach(([k, v]) => {
@@ -29,9 +30,15 @@ const upload = (file) => {
           method: 'POST',
           body: formData // This is your file object
         }).then(
-          success => console.log(success) // Handle the success response object
+          success => {
+              console.log(success)
+              document.getElementById("results") += success + "<br />";
+          }
         ).catch(
-          error => console.log(error) // Handle the error response object
+          error => {
+              console.log(error)
+              document.getElementById("results") += error + "<br />";
+          }
         );
     }
   ).catch(
