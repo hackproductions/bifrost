@@ -28,13 +28,23 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="col-7">
-                    <!--<input type="file" class="form-control-file" id="file-chooser" />
-                    <button id="upload-button" style="display:none">Upload</button>-->
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="file-chooser" name="file-chooser">
-                            <label class="custom-file-label" for="file-chooser" id="file-label">Choose file</label>
+                    <div id="instructions">
+                        <p>This website is where workshops hosts who have chosen to pre-record their workshop should upload their video file.</p>
+
+                        <h4>Instructions</h4>
+                        <ol>
+                            <li>Ensure you have formatted your video to the specification on our <a href="https://hackquarantine.com/workshops#send-us-the-prerecorded-video-pre-recorded-only">guide for workshop hosts</a>.</li>
+                            <li>Click the "Browse" button below and choose your video file.</li>
+                        </ol>
+
+                        <div id="picker" class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="file-chooser" name="file-chooser">
+                                <label class="custom-file-label" for="file-chooser" id="file-label">Choose file</label>
+                            </div>
                         </div>
+
+                        Note: if you need to upload a newer version of your video later on, simply follow the instructions again.
                     </div>
                     <div id="results"></div>
                     <div id="fb-root"></div>

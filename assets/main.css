@@ -57,6 +57,23 @@ body {
     padding: 8px;
 }
 
+#instructions {
+    color: black;
+    background: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 .2rem rgba(0,0,0,.1),0 .2rem .4rem rgba(0,0,0,.2);
+}
+
+h4 {
+    font-weight: bold !important;
+}
+
+#picker {
+    box-shadow: 0 0 .2rem rgba(0,0,0,.1),0 .2rem .4rem rgba(0,0,0,.2);
+    margin-bottom: 1em;
+}
+
 #results {
     margin-top: 1em;
     min-height: 5em;

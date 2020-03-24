@@ -63,7 +63,7 @@ function upload(file) {
         })
         .then(response => {
             if (response.ok) {
-                showSuccess("File successfully uploaded!")
+                showSuccess("Your file has been successfully uploaded!<br>You can close this tab now.")
             } else {
                 throw new Error(`HTTP Error ${response.status}`)
             }
@@ -83,12 +83,12 @@ function showSuccess(message) {
 
 function showProgress() {
   $("#message-title").text("Upload in progress...")
-  $("#message").html("Please do not close this page. When the upload is complete, a success message will be shown.")
+  $("#message").html("Please <b>do not close this page</b>. When the upload is complete, a success message will be shown. This process could take some time if you have a slow internet connection.")
   $("#event-modal").modal("show")
 }
 
 function showError(message) {
   $("#message-title").text("Error")
-  $("#message").html(`${message}<br><br><b>Please contact a member of <code>@Live Streaming Team</code> on Discord for assistance.</b>`)
+  $("#message").html(`${message}<br><br><b>Please contact a member of <code>@Live Streaming Team</code> on our Discord server for assistance.</b>`)
   $("#event-modal").modal("show")
 }
