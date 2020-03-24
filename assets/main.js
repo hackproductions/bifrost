@@ -1,6 +1,6 @@
 // Select your input type file and store it in a variable
 let input
-let tokenData
+let tokenData = null
 
 document.addEventListener('DOMContentLoaded', () => {
     getEndpoint()
@@ -70,25 +70,25 @@ function upload(file) {
         })
         .catch(error => {
             console.error(error)
-            showError(`The following error occured while trying to upload your file: ${error.message}`)
+            showError(`The following error occured while trying to upload your file:<br>${error.message}`)
         });
     }
 }
 
 function showSuccess(message) {
   $("#message-title").text("Success")
-  $("#message").text(message)
+  $("#message").html(message)
   $("#event-modal").modal("show")
 }
 
 function showProgress() {
   $("#message-title").text("Upload in progress...")
-  $("#message").text("Please do not close this page. When the upload is complete, a success message will be shown.")
+  $("#message").html("Please do not close this page. When the upload is complete, a success message will be shown.")
   $("#event-modal").modal("show")
 }
 
 function showError(message) {
   $("#message-title").text("Error")
-  $("#message").text(message)
+  $("#message").html(`${message}<br><br><b>Please contact a member of @Team on Discord for assistance.</b>`)
   $("#event-modal").modal("show")
 }
