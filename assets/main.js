@@ -18,7 +18,7 @@ const upload = (file) => {
   ).then(
     success => {
         console.log(success);
-        document.getElementById("results") += success + "<br />";
+        document.getElementById("results").value = success + "<br />";
 
         const formData = new FormData();
         Object.entries(success['fields']).forEach(([k, v]) => {
@@ -32,7 +32,7 @@ const upload = (file) => {
         }).then(
           success => {
               console.log(success)
-              document.getElementById("results") += success + "<br />";
+              document.getElementById("results").value = success + "<br />";
           }
         ).catch(
           error => {
