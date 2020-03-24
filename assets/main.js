@@ -89,6 +89,6 @@ function showProgress() {
 
 function showError(message) {
   $("#message-title").text("Error")
-  $("#message").html(`${message}<br><br><b>Please contact a member of @Team on Discord for assistance.</b>`)
+  $("#message").html(`${message}<br><br><b>Please contact a member of <code>@Live Streaming Team</code> on Discord for assistance.</b>`)
   $("#event-modal").modal("show")
 }
