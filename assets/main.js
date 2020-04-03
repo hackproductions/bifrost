@@ -70,7 +70,7 @@ function upload(file) {
         })
         .catch(error => {
             console.error(error)
-            showError(`The following error occured while trying to upload your file:<br>${error.message}`)
+            showError(`The following error occured while trying to upload your file:<br>${error}`)
         });
     }
 }
