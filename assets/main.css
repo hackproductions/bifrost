@@ -1,0 +1,75 @@
+p, h1, h2, h3, h4, h5, h6, button, .powered-by, .tagline, .headline-date, body {
+    font-family: "Source Code Pro", serif !important;
+}
+
+body {
+    background-color: #0e1428;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: calc(100vh - 2em);
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+.hero::before{
+    width: 100%;
+    height: calc(100vh - 2em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    z-index: -1;
+    background:
+    linear-gradient(
+    rgba(14, 20, 40, 0.85),
+    rgba(14, 20, 40, 0.85)
+    ),
+    /* bottom, image */
+    url("hero-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkered {
+    background-color: black;
+    background-image: linear-gradient(45deg, #EBC805 25%, transparent 25%), linear-gradient(-45deg, #EBC805 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #EBC805 75%), linear-gradient(-45deg, transparent 75%, #EBC805 75%);
+    background-size: 1em 1em;
+    background-position: 0 0, 0 0.5em, 0.5em -0.5em, -0.5em 0px;
+}
+
+.line {
+    width: 100vw;
+    height: 2em;
+}
+
+#main {
+    padding: 10vh 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#logo {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#instructions {
+    color: black;
+    background: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 .2rem rgba(0,0,0,.1),0 .2rem .4rem rgba(0,0,0,.2);
+}
+
+h4 {
+    font-weight: bold !important;
+}
+
+#picker {
+    box-shadow: 0 0 .2rem rgba(0,0,0,.1),0 .2rem .4rem rgba(0,0,0,.2);
+    margin-bottom: 1em;
+}
